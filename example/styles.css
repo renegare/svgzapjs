@@ -1,3 +1,29 @@
-* {
-	background: red;
+body {
+	font-family: sans-serif;
+}
+
+
+h1, h2, p, ul, div, pre {
+	width: 500px;
+	margin: auto;
+	margin-bottom: 30px
+}
+
+#svg_container {
+	height: 500px;
+	border: 1px solid #ccc;
+	background-size: contain;
+}
+
+#svg_container svg{
+	background-size: contain;
+}
+
+#console_output {
+	border: 1px solid #ccc;
+	height: 100px;
+}
+
+rect {
+	fill: #ff0000;
 }
