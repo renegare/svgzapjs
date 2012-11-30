@@ -39,95 +39,31 @@
 
 	 		var zap_handler = new SVG_ZAP( document.querySelector('#svg_container > svg') );
 
- // zap_handler.zoom( 7, 0, 380 );
-
       $({ level: 1 }).animate({ level: 3 }, {
         duration: 2000,
-        step: function( a, b, c ){
-          zap_handler.zoom( a, 500, 0 );
+        step: function( lvl ){
+          zap_handler.zoom( lvl );
         },
         complete: function(){
+
           $({ level: 3 }).animate({ level: 8 }, {
             duration: 1000,
-            step: function( a, b, c ){
-              zap_handler.zoom( a, 0, 500 );
+            step: function( lvl ){
+              zap_handler.zoom( lvl, 500, 500 );
             },
 
             complete: function(){
 
             	$({ level: 8 }).animate({ level: 1 }, {
 		            duration: 1000,
-		            step: function( a, b, c ){
-		              zap_handler.zoom( a, 400, 400 );
+		            step: function( lvl ){
+		              zap_handler.zoom( lvl );
 		            }
 		        });
             }
           });
         }
       });
-
-
-      /*
-
-
-	 	zap_handler.zoom( 7, 0, 10 );
-
-
-
-      $({ level: 1 }).animate({ level: 6 }, {
-        duration: 1000,
-        step: function( a, b, c ){
-          zap_handler.zoom( a, 100, 100 );
-        },
-        complete: function(){
-
-          $({ level: 6 }).animate({ level: 1 }, {
-            duration: 1000,
-            step: function( a, b, c ){
-              zap_handler.zoom( a, 300, 300 );
-            }
-          });
-        }
-      });
-
-
-      zap_handler.zoom( 2, 100, 100 );
-      zap_handler.zoom( 1.5, 100, 100 );
-      setTimeout( function(){
-        zap_handler.zoom( 1.5, 100, 100 );
-      }, 2000);
-
-
-	 		$({ level: 1 }).animate({ level: 3 }, {
-	 			duration: 1000,
-	 			step: function( a, b, c ){
-	 				zap_handler.zoom( a, 100, 100 );
-	 			},
-        complete: function(){
-
-          $({ level: 3 }).animate({ level: 6 }, {
-            duration: 1000,
-            step: function( a, b, c ){
-              zap_handler.zoom( a, 500, 500 );
-            },
-            complete: function(){
-              
-                $({ level: 6 }).animate({ level: 1 }, {
-                  duration: 2000,
-                  step: function( a, b, c ){
-                    zap_handler.zoom( a, 250, 250 );
-                  },
-                  complete: function(){
-                    console.log( 'fini' );
-                  }
-                });
-
-            }
-          });
-
-        }
-	 		});
-*/
   
 	 		
 
