@@ -22,8 +22,6 @@ var SVG_ZAP = function( element, options ){
 			point_x =  point_x > client_bb.width ? client_bb.width : point_x;
 			point_y =  point_y > client_bb.height ? client_bb.height : point_y;
 
-			console.log( point_x, point_y );
-
 			// we dont do zoom outs pass 1 ( 1 being the origin )
 			if( (level = parseFloat(level)) < 1 ) {
 				level = 1;
