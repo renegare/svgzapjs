@@ -3,7 +3,7 @@ body {
 }
 
 
-h1, h2, p, ul, div, pre {
+h1, h2, p, ul, div, pre, form {
 	width: 500px;
 	margin: auto;
 	margin-bottom: 30px
@@ -26,4 +26,20 @@ h1, h2, p, ul, div, pre {
 
 rect {
 	fill: #ff0000;
+}
+
+.field {
+	width: 50%;
+	float: left;
+}
+
+label {
+	float: left;
+	width: 30%;
+	margin-right: 5%;
+}
+
+input {
+	float: left;
+	width: 50%;
 }
